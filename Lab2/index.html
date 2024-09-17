@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Front-end, HTML, CSS, таблиця, позицінування, трансформація, веб-розробка, телефон, hover">
+    <meta name="description" content="Таблиця з авторськими даними та інтерфейс телефона за допомогою CSS">
+    <meta name="author" content="Максим Хвиць">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Хвиць М.С., ІМ-21, Лаб-2, 6-варіант</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;   
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 17px;
+            table-layout: fixed; 
+        }
+
+        td {
+            border: 2px solid #000000;
+            padding: 10px;
+        }
+
+        table tr {
+            height: 40px; 
+        }
+
+        table tr:first-child {
+            background-color: #668f8f;
+            color: #012611;
+        } 
+
+        table tr:nth-child(2) {
+            background-color: #f5f566;
+            color: #103BBC;
+        }
+
+        table tr:first-child:hover {
+            background-color: #f5f566;
+            color: #103BBC;
+        }
+
+        table tr:nth-child(2):hover {
+            background-color: #668f8f;
+            color: #012611;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div style="text-align: center;">
+        <a href="../index.html">Головна</a>
+    </div>
+
+    <table >
+          <tr>
+            <td rowspan="2">Хвиць</td>
+            <td colspan="2">Максим</td>
+            <td>Сергійович</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td rowspan="2">ІМ-21</td>
+            <td rowspan="2">ЛР №2</td>
+            <td rowspan="3">Варіант - 6</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td rowspan="2"></td>
+          </tr>
+          <tr>
+            <td colspan="3"></td>
+          </tr>
+    </table>
+    
+    <div class="containers">
+		<div class="phone-position">
+          	<div class="rectangle rect-position"></div>
+            <div class="time time-position">12:00</div>
+            <div class="buttons btn-position">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+ 		
+      	<div class="phone-transform">
+            <div class="rectangle rect-transform"></div>
+            <div class="time time-transform">12:00</div>
+            <div class="buttons btn-transform">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div> 
+  	</div>
+
+</body>
+</html>

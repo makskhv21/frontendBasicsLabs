@@ -1,0 +1,66 @@
+.containers {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.rectangle {
+    width: 200px;
+    height: 310px;
+    background-color: #d6e3bc;
+    border-radius: 30px;
+    border: 2px solid rgb(34, 34, 34);
+}
+
+.time {
+    top: 20px;
+    left: 20px;
+    width: 160px;
+    height: 130px;
+    font-size: 40px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(34, 34, 34);
+    border-radius: 30px;
+    line-height: 130px;
+}
+
+.buttons {
+    position: relative;
+    top: 30px; 
+    left: 20px;
+    justify-content: center;
+    width: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+
+.buttons > div {
+    width: 35px;
+    height: 30px;
+    background-color: #3f3151;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.rect-position {
+    position: absolute;
+}
+
+.time-position{
+    position: relative;
+}
+
+.btn-position {
+    position: relative;
+}
+
+.time-transform {
+    transform: translate(20px, -295px);
+}
+
+.btn-transform {
+    transform: translate(0px, -315px);
+}
