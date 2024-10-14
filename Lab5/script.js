@@ -63,30 +63,31 @@ document.getElementById("data-form").addEventListener("submit", function(event) 
 // Creating a table
 const table = document.getElementById('color-table');
 let cellIndex = 1;
+
 for (let i = 0; i < 6; i++) {
     const row = table.insertRow();
     for (let j = 0; j < 6; j++) {
         const cell = row.insertCell();
         cell.innerText = cellIndex++;
-        
+
         // Random color on hover
         cell.addEventListener('mouseover', function() {
             cell.style.backgroundColor = getRandomColor();
         });
-        
+
         // Color selection on click
         cell.addEventListener('click', function() {
             openColorPicker(cell);
         });
-        
-        // Double-click color selection
+
+        // Change color of all cells in the table on double-click
         cell.addEventListener('dblclick', function() {
-            cell.style.backgroundColor = getRandomColor();
+            changeAllCellsColor();
         });
     }
 }
 
-// A function a random color
+// A function for generating a random color
 function getRandomColor() {
     const letters = '0123456789ABCDEF';
     let color = '#';
@@ -96,17 +97,28 @@ function getRandomColor() {
     return color;
 }
 
+// Function to change the color of all cells in the table
+function changeAllCellsColor() {
+    const rows = table.rows;
+    for (let i = 0; i < rows.length; i++) {
+        const cells = rows[i].cells;
+        for (let j = 0; j < cells.length; j++) {
+            cells[j].style.backgroundColor = getRandomColor();
+        }
+    }
+}
+
 // A function to open the color selection
 function openColorPicker(cell) {
     const colorInput = document.createElement('input');
     colorInput.type = 'color';
     colorInput.style.position = 'absolute';
     colorInput.style.opacity = 0;
-    
+
     colorInput.addEventListener('input', function() {
         cell.style.backgroundColor = colorInput.value;
     });
-    
+
     // Add a field for choosing a color and call a click
     document.body.appendChild(colorInput);
     colorInput.click();
