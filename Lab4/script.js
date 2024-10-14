@@ -12,11 +12,12 @@ const minWidth = initialWidth / 3;
 
 // Function to update image width
 const updateImageWidth = (factor) => {
-    const lastImage = photoContainer.lastElementChild;
+    const images = photoContainer.querySelectorAll('img'); 
+    const lastImage = images[images.length - 1]; 
     if (lastImage) {
-        const newWidth = lastImage.clientWidth * factor;
+        const newWidth = lastImage.clientWidth * factor; 
         if ((factor > 1 && newWidth <= maxWidth) || (factor < 1 && newWidth >= minWidth)) {
-            lastImage.style.width = newWidth + 'px';
+            lastImage.style.width = newWidth + 'px'; 
         }
     }
 };
