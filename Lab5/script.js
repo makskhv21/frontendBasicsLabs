@@ -1,5 +1,5 @@
 document.getElementById("data-form").addEventListener("submit", function(event) {
-    event.preventDefault(); // for registered shipment
+    event.preventDefault(); // Prevent the default form submission
 
     const fullNameInput = document.getElementById("full-name").value.trim();
     const birthday = document.getElementById("birthday").value.trim();
@@ -10,7 +10,7 @@ document.getElementById("data-form").addEventListener("submit", function(event) 
     // Regular expressions for validation
     const ukrainianNameRegex = /^[А-ЯІЇЄ][а-яіїє']+\s[А-ЯІЇЄ][а-яіїє']+\s[А-ЯІЇЄ][а-яіїє']+$/; 
     const englishNameRegex = /^([A-Z][a-z]+(\s[A-Z][a-z]+){1,2})$/; 
-    const addressRegex = /^м\.\s+.+\s+вул\.\s+.+,\s*\d+(\s+кв\.\s*\d+)?$/;
+    const addressRegex = /^(м\.|с\.|смт\.)\s+.+,\s+вул\.\s+.+,\s*\d+(\s+кв\.\s*\d+)?$/;
     const telegramRegex = /^[a-zA-Z0-9_]{5,}$/;
 
     // Formatted ПІБ: capitalize each word
@@ -23,8 +23,10 @@ document.getElementById("data-form").addEventListener("submit", function(event) 
 
     let isValid = true;
 
+    // Hide error messages initially
     document.querySelectorAll(".error-message").forEach(el => el.style.display = "none");
-    // Check 
+
+    // Check validations
     if (!(ukrainianNameRegex.test(fullNameInput) || englishNameRegex.test(fullNameInput))) {
         isValid = false;
         document.getElementById("full-name-error").style.display = "block";
@@ -59,6 +61,7 @@ document.getElementById("data-form").addEventListener("submit", function(event) 
         alert("Please correct the errors in the form.");
     }
 });
+
 
 // Creating a table
 const table = document.getElementById('color-table');
