@@ -36,21 +36,21 @@
                         autocomplete="name"
                         pattern="^((?:[А-ЯІЇЄ][а-яіїє']+\s){2}[А-ЯІЇЄ][а-яіїє']+|(?:[A-Z][a-z]+\s){1,2}[A-Z][a-z]+)$"
                         title="Введіть повне ім'я у форматі: Прізвище Ім'я По батькові (українською) або Last Name First Name (англійською)"
-                    />
+                    >
                     <span class="error-message" id="full-name-error">Введіть повне ім'я у форматі: Прізвище Ім'я По батькові (українською) або Last Name First Name (англійською)</span>
                 </div>
                 
                 <div class="input-group">
                     <input 
                         id="birthday"
-                        type="date" 
+                        type="date"
                         required
                         autocomplete="bday"
                         title="Введіть дату народження у форматі РРРР-ММ-ДД"
-                    />
+                    >
                     <span class="error-message" id="birthday-error">Дата не може бути в майбутньому</span>
                 </div>
-
+            
                 <div class="input-group">
                     <input 
                         id="address"
@@ -60,7 +60,7 @@
                         autocomplete="address-line1"
                         pattern="^м\.\s+.+\s+вул\.\s+.+,\s*\d+(\s+кв\.\s*\d+)?$"
                         title="Адреса повинна містити 'м.' та 'вул.', і може містити 'кв.' (Наприклад: м. Київ, вул. Шевченка, 5, кв. 10)"
-                    />
+                    >
                     <span class="error-message" id="address-error">Адреса повинна містити 'м.' та 'вул.'</span>
                 </div>              
             
@@ -73,10 +73,10 @@
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
                         autocomplete="email" 
                         title="Введіть коректну адресу електронної пошти, наприклад: example@mail.com"
-                    />
+                    >
                     <span class="error-message" id="email-error">Введіть коректну адресу електронної пошти. Приклад: example@mail.com</span>
                 </div>
-
+            
                 <div class="input-group">
                     <input 
                         id="telegram" 
@@ -86,12 +86,12 @@
                         autocomplete="tel"
                         pattern="^[a-zA-Z0-9_]{5,}$"
                         title="Ім'я користувача має містити щонайменше 5 символів: літери, цифри або знак підкреслення"
-                    />
+                    >
                     <span class="error-message" id="telegram-error">Ім'я користувача має містити щонайменше 5 символів</span>
                 </div>
-
+            
                 <button type="submit">Підтвердити</button>
-            </form>
+            </form>            
         </div>
         
         <div class="container-form">
