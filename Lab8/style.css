@@ -378,6 +378,11 @@ main {
     color: rgb(235, 244, 249);
 }
 
+.mobile-menu button a {
+    color: white;
+    text-decoration: none;
+}
+
 
 /* MAIN-PAGE_HEADER */
 .main-page_header {
@@ -1178,10 +1183,6 @@ main {
 }
 
 @media (max-width: 480px) {
-    body {
-        background-color: #ff0044a1;
-    }
-
     .main-page_quote-block h2 {
         font-size: 20px;
     }
