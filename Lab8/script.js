@@ -1,3 +1,4 @@
+// Transparency when scrolling to header
 window.addEventListener("scroll", () => {
     const header = document.querySelector(".header");
     const select = document.querySelector(".header-select");
@@ -12,29 +13,26 @@ window.addEventListener("scroll", () => {
 });
 
 
-
-// Отримуємо елементи відео і кнопки
+// Video stop and play
 const video = document.getElementById('backgroundVideo');
 const toggleBtn = document.getElementById('toggleBtn');
 
-// При натисканні на кнопку зупиняємо або відновлюємо відео
 toggleBtn.addEventListener('click', function() {
     if (video.paused) {
-        video.play(); // Відновлюємо відео
+        video.play();
         toggleBtn.classList.remove('pause');
         toggleBtn.classList.add('play');
     } else {
-        video.pause(); // Зупиняємо відео
+        video.pause();
         toggleBtn.classList.remove('play');
         toggleBtn.classList.add('pause');
     }
 });
 
-// Встановлюємо кнопку у стан 'play' на початку
 toggleBtn.classList.add('play');
 
 
-
+// Button menu for head HEADER
 const burgerBtn = document.getElementById('burger-btn');
 const headerMenu = document.getElementById('header-menu');
 
@@ -44,13 +42,7 @@ burgerBtn.addEventListener('click', () => {
 });
 
 
-
-
-
-
-
-
-
+// Button menu for Fashion Highlights
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 
