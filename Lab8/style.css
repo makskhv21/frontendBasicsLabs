@@ -461,6 +461,7 @@ main {
 }
 
 .main-page_quote-block button {
+    float: right;
     font-size: 16px;
     width: 140px;
     height: 43px;
@@ -691,19 +692,13 @@ main {
 }
 
 .container-fashion .item {
-    background-color: #333333;
     border-radius: 15px;
     overflow: hidden;
     padding: 20px;
     text-align: center;
     width: 280px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     transition: box-shadow 0.3s ease;
-    border: 2px solid #444444;
-}
-
-.container-fashion .item:hover {
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    text-align: left;
 }
 
 .container-fashion img {
@@ -732,7 +727,7 @@ main {
     background-color: #ff8c00; 
     color: white;
     border: none;
-    padding: 18px 30px;
+    padding: 18px 20px;
     font-size: 1.2em;
     font-weight: bold;
     border-radius: 30px;
@@ -809,12 +804,14 @@ main {
     font-size: 1.6rem;
     margin-bottom: 10px;
     color: #333;
+    text-align: center;
 }
 
 .footer-item p {
     font-size: 1rem;
     margin-bottom: 20px;
     color: #666;
+    text-align: center;
 }
 
 .footer-item button {
